@@ -62,7 +62,7 @@ streetvibes "shoot-up hill, london" \
 - `--points`: Number of locations to sample along the street (default: 5)
 - `--per-point`: Number of images to download per location (default: 1)
 - `--dir`: Folder to save downloaded images (default: *street_images*)
-- `--v-model`: Vision model for image analysis (default: [`llava`*`](https://ollama.com/library/llava))
+- `--v-model`: Vision model for image analysis (default: [`llava`](https://ollama.com/library/llava))
 - `--t-model`: Text model for summary synthesis (default: [`llama3.1`](https://ollama.com/library/llama3.1))
 
 ## License
