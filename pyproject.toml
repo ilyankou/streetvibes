@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "streetvibes"
+version = "0.1.0"
+description = "Urban vibe analysis using OpenStreetMap, Mapillary, and Local LLMs."
+authors = [{name = "Ilya Ilyankou", email = "ilya.ilyankou.23@ucl.ac.uk"}]
+requires-python = ">=3.9"
+dependencies = [
+    "requests",
+    "geopy",
+    "shapely",
+    "pyproj",
+    "tqdm",
+    "click"
+]
+
+[project.scripts]
+streetvibes = "streetvibes.cli:main"

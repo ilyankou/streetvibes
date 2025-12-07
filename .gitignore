@@ -1,0 +1,11 @@
+.DS_Store
+.ipynb_checkpoints
+.env
+
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+street_images/
