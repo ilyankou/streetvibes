@@ -53,8 +53,10 @@ streetvibes "shoot-up hill, london" \
     --points 5 \
     --per-point 1 \
     --dir street_images \
-    --v-model llava:7b \
-    --t-model llama3.1
+    --v-model llava \
+    --v-prompt "You are an elderly woman with mobility issues. Focus on sidewalks, crossings, and safety." \
+    --t-model llama3.1 \
+    --no-structured
 ```
 
 **Flags:**
@@ -63,7 +65,9 @@ streetvibes "shoot-up hill, london" \
 - `--per-point`: Number of images to download per location (default: 1)
 - `--dir`: Folder to save downloaded images (default: *street_images*)
 - `--v-model`: Vision model for image analysis (default: [`llava`](https://ollama.com/library/llava))
+- `--v-prompt`: Override the vision prompt for persona-based analysis (default: built-in urban planner prompt)
 - `--t-model`: Text model for summary synthesis (default: [`llama3.1`](https://ollama.com/library/llama3.1))
+- `--structured/--no-structured`: Toggle structured JSON output (default: `--structured`)
 
 ## License
 
