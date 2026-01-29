@@ -11,8 +11,10 @@ from .pipeline import run_pipeline
 @click.option('--v-model', default='llava', help='Ollama Vision Model (e.g., llava).')
 @click.option('--v-prompt', default=None, help='Custom prompt for the vision model.')
 @click.option('--t-model', default='llama3.1', help='Ollama Text Model (e.g., llama3.1).')
+@click.option('--t-prompt', default=None, help='Custom prompt for the text summary model.')
 @click.option('--structured/--no-structured', default=True, help='Return structured JSON output.')
-def main(location, points, per_point, dir, v_model, v_prompt, t_model, structured):
+@click.option('--json-keys', default=None, help='Comma-separated JSON keys for structured output.')
+def main(location, points, per_point, dir, v_model, v_prompt, t_model, t_prompt, structured, json_keys):
     """
     Analyse the urban vibes of a specific street location.
     
@@ -23,6 +25,9 @@ def main(location, points, per_point, dir, v_model, v_prompt, t_model, structure
         return
 
     try:
+        text_keys = None
+        if json_keys:
+            text_keys = [k.strip() for k in json_keys.split(',') if k.strip()]
         summary = run_pipeline(
             query=location,
             n_points=points,
@@ -31,7 +36,9 @@ def main(location, points, per_point, dir, v_model, v_prompt, t_model, structure
             vision_model=v_model,
             vision_prompt=v_prompt,
             text_model=t_model,
-            structured=structured
+            text_prompt=t_prompt,
+            structured=structured,
+            text_keys=text_keys
         )
         if summary:
             click.echo("\n" + "="*40)

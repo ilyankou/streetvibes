@@ -12,6 +12,8 @@ def run_pipeline(
     text_model,
     structured=True,
     vision_prompt=None,
+    text_keys=None,
+    text_prompt=None
 ):
     print(f"🔎 Locating '{query}'...")
     line, name, osm_id = get_street_geometry(query)
@@ -51,7 +53,13 @@ def run_pipeline(
             print(f"   Error processing {path}: {e}")
             
     print(f"📝 Synthesizing summary with {text_model}...")
-    summary_prompt = build_street_summary_prompt(vibes, street_name=name, structured=structured)
+    summary_prompt = build_street_summary_prompt(
+        vibes,
+        street_name=name,
+        structured=structured,
+        text_prompt=text_prompt,
+        text_keys=text_keys,
+    )
     response_format = "json" if structured else None
     final_summary = ask_llm(summary_prompt, model=text_model, response_format=response_format)
 

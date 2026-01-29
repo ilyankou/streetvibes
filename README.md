@@ -4,7 +4,7 @@ StreetVibes is a CLI tool that automatically analyses the 'vibe' of any street u
 
 Just type the street name + city, and (if there are Mapillary images), get the summary!
 
-<img src="streetvibes.svg" style="width:100%; magin:20px 0;">
+<img src="streetvibes.svg" style="width:100%; magin-top:20px;">
 
 ## 🛠️ Prerequisites
 
@@ -44,8 +44,6 @@ Then, run the tool with a location query:
 $ streetvibes "Shoot-up Hill, London"
 ```
 
-You can also import
-
 ### Advanced Options
 
 You can customise the image sampling density, image output directory, and models used:
@@ -58,6 +56,8 @@ streetvibes "shoot-up hill, london" \
     --v-model llava \
     --v-prompt "You are an elderly woman with mobility issues. Focus on sidewalks, crossings, and safety." \
     --t-model llama3.1 \
+    --t-prompt "Summarize the overall street vibe in 3-4 sentences, highlighting livability and safety." \
+    --json-keys "summary,land_use,walkability,traffic,greenery,safety,maintenance,socio_economic,variations" \
     --no-structured
 ```
 
@@ -69,6 +69,8 @@ streetvibes "shoot-up hill, london" \
 - `--v-model`: Vision model for image analysis (default: [`llava`](https://ollama.com/library/llava))
 - `--v-prompt`: Override the vision prompt for persona-based analysis (default: built-in urban planner prompt)
 - `--t-model`: Text model for summary synthesis (default: [`llama3.1`](https://ollama.com/library/llama3.1))
+- `--t-prompt`: Override the text prompt used to summarize VLM descriptions (default: built-in urban planner prompt)
+- `--json-keys`: Comma-separated JSON keys for structured output (default: `summary, land_use, walkability, traffic, greenery, safety, maintenance, socio_economic, variations`)
 - `--structured/--no-structured`: Toggle structured JSON output (default: `--structured`)
 
 ## License

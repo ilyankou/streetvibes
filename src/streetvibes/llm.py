@@ -40,26 +40,43 @@ def ask_llm(prompt: str, model: str = 'llama3.1', response_format: Optional[str]
         return json.loads(response_text)
     return response_text
 
-def build_street_summary_prompt(vibes, street_name='this street', structured: bool = False):
-    header = (
-        f"You are an urban planner. You are given descriptions of ~{len(vibes)} "
-        f"viewpoints along {street_name}. Each description is from an image-based "
-        "model and may be noisy.\n\n"
-        "Provide a concise one-paragraph summary of the street's character, covering: "
-        "land use, walkability, traffic, greenery, safety, maintenance, and socio-economic cues. "
-        "Highlight key variations but avoid repeating segment details.\n\n"
-    )
+def build_street_summary_prompt(
+    vibes,
+    street_name: str = 'this street',
+    structured: bool = False,
+    text_prompt: Optional[str] = None,
+    text_keys: Optional[list[str]] = None,
+):
+    if text_prompt:
+        header = text_prompt.strip() + "\n\n"
+    else:
+        header = (
+            f"You are an urban planner. You are given descriptions of ~{len(vibes)} "
+            f"viewpoints along {street_name}. Each description is from an image-based "
+            "model and may be noisy.\n\n"
+            "Provide a concise one-paragraph summary of the street's character, covering: "
+            "land use, walkability, traffic, greenery, safety, maintenance, and socio-economic cues. "
+            "Highlight key variations but avoid repeating segment details.\n\n"
+        )
     if structured:
+        keys = text_keys or [
+            "summary",
+            "land_use",
+            "walkability",
+            "traffic",
+            "greenery",
+            "safety",
+            "maintenance",
+            "socio_economic",
+            "variations",
+        ]
         header += (
             "Return a JSON object with the following keys: "
-            "summary, land_use, walkability, traffic, greenery, safety, maintenance, "
-            "socio_economic, variations. "
+            f"{', '.join(keys)}. "
             "Each value should be a short string. "
             "The summary must be one paragraph.\n\n"
         )
-    header += (
-        "Segment-level descriptions:\n"
-    )
+    header += "Segment-level descriptions:\n"
     body = "\n\n".join(
         f">>> Segment {i+1}: {v['vibe']}"
             for i, v in enumerate(vibes)
