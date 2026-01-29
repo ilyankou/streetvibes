@@ -4,7 +4,7 @@ StreetVibes is a CLI tool that automatically analyses the 'vibe' of any street u
 
 Just type the street name + city, and (if there are Mapillary images), get the summary!
 
-![](streetvibes.svg)
+<img src="streetvibes.svg" style="width:100%; magin:20px 0;">
 
 ## 🛠️ Prerequisites
 
