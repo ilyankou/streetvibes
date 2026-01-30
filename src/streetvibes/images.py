@@ -2,27 +2,36 @@ import os
 import requests
 from pathlib import Path
 
-def point2bbox(p, buffer=0.0003):
+def point2bbox(p, buffer=0.0002):
     south, north = p.y - buffer, p.y + buffer
     west, east = p.x - buffer, p.x + buffer
-    return f'{west},{south},{east},{north}'
+    return f'{round(west, 5)},{round(south, 5)},{round(east, 5)},{round(north, 5)}'
 
-def get_images_from_mapillary(bbox: str, out_dir: str, n_images: int = 1):
+def get_images_from_mapillary(p, out_dir: str, n_images: int = 1):
     token = os.environ.get('MAPILLARY_TOKEN')
     if not token:
-        raise RuntimeError('MAPILLARY_TOKEN env var not set. Please export it.')
+        raise RuntimeError('MAPILLARY_TOKEN env var not set. See https://www.mapillary.com/developer/api-documentation/')
+
+    bbox = point2bbox(p)
 
     url = 'https://graph.mapillary.com/images'
     params = {
         'access_token': token,
-        'fields': 'id,geometry,captured_at,thumb_1024_url',
+        'fields': 'id,geometry,computed_geometry,captured_at,thumb_1024_url',
         'bbox': bbox,
-        'limit': n_images,
+        'limit': 50,
     }
 
     resp = requests.get(url, params=params, timeout=10)
     resp.raise_for_status()
     data = resp.json().get('data', [])
+
+    # Get the most recent n_images among 50 captured
+    data = sorted(
+        data,
+        key=lambda img: int(img.get('captured_at') or 0),
+        reverse=True
+    )[:n_images]
 
     out_paths = []
     Path(out_dir).mkdir(parents=True, exist_ok=True)

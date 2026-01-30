@@ -1,6 +1,6 @@
 from tqdm import tqdm
 from .geo import get_street_geometry, sample_points_on_line, measure_length_m
-from .images import point2bbox, get_images_from_mapillary
+from .images import get_images_from_mapillary
 from .llm import ask_vlm, ask_llm, build_street_summary_prompt
 
 def run_pipeline(
@@ -27,8 +27,7 @@ def run_pipeline(
     print("📸 Downloading Mapillary images...")
     image_paths = []
     for p in tqdm(points, unit="loc"):
-        bbox = point2bbox(p)
-        paths = get_images_from_mapillary(bbox, out_dir, n_images=n_images_per_point)
+        paths = get_images_from_mapillary(p, out_dir, n_images=n_images_per_point)
         image_paths.extend(paths)
 
     if not image_paths:

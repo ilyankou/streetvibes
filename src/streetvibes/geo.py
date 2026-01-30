@@ -81,11 +81,18 @@ def get_street_geometry(query: str, search_radius_m: float = 2000.0):
 
     # 4. Merge
     if segments:
-        merged = linemerge(unary_union(segments))
-        if merged.geom_type == 'MultiLineString':
-            line = max(merged.geoms, key=lambda g: g.length)
+        merged_input = unary_union(segments)
+        if merged_input.geom_type == 'LineString':
+            line = merged_input
         else:
-            line = merged
+            try:
+                merged = linemerge(merged_input)
+            except Exception:
+                merged = merged_input
+            if merged.geom_type == 'MultiLineString':
+                line = max(merged.geoms, key=lambda g: g.length)
+            else:
+                line = merged
     else:
         line = nominatim_line
 

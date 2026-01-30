@@ -1,0 +1,314 @@
+(base) ilya@192 streetvibes % streetvibes "great russell street, london" --v-prompt "Assess visible street greenness only. Score 0–10 based on trees and vegetation visible from the street, 0=no vegetation, 10=very green. Ignore weather and season. Return JSON with (i) greenness_score (a single number between 0 and 10) and (ii) greenness_rationale (brief sentence, visible evidence only)" --t-prompt "Combine multiple greenness scores for one street. Compute the mean and round to nearest integer. Note agreement or disagreement briefly. Do not add new evidence. Return JSON: with (i) mean_greenness_index (a single integer between 0 and 10) and (ii) consistency_note" --json-keys "mean_greenness_index,consistency_note"
+🔎 Locating 'great russell street, london'...
+📍 Found 'Great Russell Street' (OSM ID: 2876427).
+📏 Length of this + adjacent road segments: 541 meters.
+🎰 Sampling 5 points along the street...
+📸 Downloading Mapillary images...
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:18<00:00,  3.62s/loc]
+🌋 Analysing 5 images with llava...
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:40<00:00,  8.18s/img]
+📝 Synthesizing summary with llama3.1...
+
+========================================
+       STREET VIBE SUMMARY
+========================================
+
+{
+  "mean_greenness_index": 4,
+  "consistency_note": "Scores show moderate disagreement"
+}
+(base) ilya@192 streetvibes % streetvibes "bloomsbury square, london" --v-prompt "Assess visible street greenness only. Score 0–10 based on trees and vegetation visible from the street, 0=no vegetation, 10=very green. Ignore weather and season. Return JSON with (i) greenness_score (a single number between 0 and 10) and (ii) greenness_rationale (brief sentence, visible evidence only)" --t-prompt "Combine multiple greenness scores for one street. Compute the mean and round to nearest integer. Note agreement or disagreement briefly. Do not add new evidence. Return JSON: with (i) mean_greenness_index (a single integer between 0 and 10) and (ii) consistency_note" --json-keys "mean_greenness_index,consistency_note"
+🔎 Locating 'bloomsbury square, london'...
+📍 Found 'Bloomsbury Square' (OSM ID: 438309961).
+📏 Length of this + adjacent road segments: 337 meters.
+🎰 Sampling 5 points along the street...
+📸 Downloading Mapillary images...
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:14<00:00,  2.92s/loc]
+🌋 Analysing 5 images with llava...
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:41<00:00,  8.38s/img]
+📝 Synthesizing summary with llama3.1...
+
+========================================
+       STREET VIBE SUMMARY
+========================================
+
+{
+  "mean_greenness_index": 6,
+  "consistency_note": "Moderate disagreement: scores vary from 3 to 9, with no clear pattern or indication of a consistently green area."
+}
+(base) ilya@192 streetvibes % streetvibes "bloomsbury place, london" --v-prompt "Assess visible street greenness only. Score 0–10 based on trees and vegetation visible from the street, 0=no vegetation, 10=very green. Ignore weather and season. Return JSON with (i) greenness_score (a single number between 0 and 10) and (ii) greenness_rationale (brief sentence, visible evidence only)" --t-prompt "Combine multiple greenness scores for one street. Compute the mean and round to nearest integer. Note agreement or disagreement briefly. Do not add new evidence. Return JSON: with (i) mean_greenness_index (a single integer between 0 and 10) and (ii) consistency_note" --json-keys "mean_greenness_index,consistency_note"
+🔎 Locating 'bloomsbury place, london'...
+Error: Cannot linemerge LINESTRING (-0.122917 51.5195882, -0.1223859 51.5198096, -0.1222873 51.5198507, -0.1221838 51.5198962)
+(base) ilya@192 streetvibes % streetvibes "southampton row, london" --v-prompt "Assess visible street greenness only. Score 0–10 based on trees and vegetation visible from the street, 0=no vegetation, 10=very green. Ignore weather and season. Return JSON with (i) greenness_score (a single number between 0 and 10) and (ii) greenness_rationale (brief sentence, visible evidence only)" --t-prompt "Combine multiple greenness scores for one street. Compute the mean and round to nearest integer. Note agreement or disagreement briefly. Do not add new evidence. Return JSON: with (i) mean_greenness_index (a single integer between 0 and 10) and (ii) consistency_note" --json-keys "mean_greenness_index,consistency_note"
+🔎 Locating 'southampton row, london'...
+📍 Found 'Southampton Row' (OSM ID: 438311806).
+📏 Length of this + adjacent road segments: 310 meters.
+🎰 Sampling 5 points along the street...
+📸 Downloading Mapillary images...
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:18<00:00,  3.67s/loc]
+🌋 Analysing 4 images with llava...
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:29<00:00,  7.30s/img]
+📝 Synthesizing summary with llama3.1...
+
+========================================
+       STREET VIBE SUMMARY
+========================================
+
+{
+  "mean_greenness_index": 2,
+  "consistency_note": "Low agreement on scores between segments"
+}
+(base) ilya@192 streetvibes % streetvibes "vernon place, london" --v-prompt "Assess visible street greenness only. Score 0–10 based on trees and vegetation visible from the street, 0=no vegetation, 10=very green. Ignore weather and season. Return JSON with (i) greenness_score (a single number between 0 and 10) and (ii) greenness_rationale (brief sentence, visible evidence only)" --t-prompt "Combine multiple greenness scores for one street. Compute the mean and round to nearest integer. Note agreement or disagreement briefly. Do not add new evidence. Return JSON: with (i) mean_greenness_index (a single integer between 0 and 10) and (ii) consistency_note" --json-keys "mean_greenness_index,consistency_note"
+🔎 Locating 'vernon place, london'...
+📍 Found 'Vernon Place' (OSM ID: 4236993).
+📏 Length of this + adjacent road segments: 116 meters.
+🎰 Sampling 5 points along the street...
+📸 Downloading Mapillary images...
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:09<00:00,  1.91s/loc]
+🌋 Analysing 5 images with llava...
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:35<00:00,  7.07s/img]
+📝 Synthesizing summary with llama3.1...
+
+========================================
+       STREET VIBE SUMMARY
+========================================
+
+{
+  "mean_greenness_index": 4,
+  "consistency_note": "Disagreement between segments due to varying descriptions of vegetation"
+}
+(base) ilya@192 streetvibes % streetvibes "bloomsbury way, london" --v-prompt "Assess visible street greenness only. Score 0–10 based on trees and vegetation visible from the street, 0=no vegetation, 10=very green. Ignore weather and season. Return JSON with (i) greenness_score (a single number between 0 and 10) and (ii) greenness_rationale (brief sentence, visible evidence only)" --t-prompt "Combine multiple greenness scores for one street. Compute the mean and round to nearest integer. Note agreement or disagreement briefly. Do not add new evidence. Return JSON: with (i) mean_greenness_index (a single integer between 0 and 10) and (ii) consistency_note" --json-keys "mean_greenness_index,consistency_note"
+🔎 Locating 'bloomsbury way, london'...
+Error: 504 Server Error: Gateway Timeout for url: https://overpass-api.de/api/interpreter
+(base) ilya@192 streetvibes % streetvibes "bloomsbury way, london" --v-prompt "Assess visible street greenness only. Score 0–10 based on trees and vegetation visible from the street, 0=no vegetation, 10=very green. Ignore weather and season. Return JSON with (i) greenness_score (a single number between 0 and 10) and (ii) greenness_rationale (brief sentence, visible evidence only)" --t-prompt "Combine multiple greenness scores for one street. Compute the mean and round to nearest integer. Note agreement or disagreement briefly. Do not add new evidence. Return JSON: with (i) mean_greenness_index (a single integer between 0 and 10) and (ii) consistency_note" --json-keys "mean_greenness_index,consistency_note"
+🔎 Locating 'bloomsbury way, london'...
+📍 Found 'Bloomsbury Way' (OSM ID: 741348615).
+📏 Length of this + adjacent road segments: 301 meters.
+🎰 Sampling 5 points along the street...
+📸 Downloading Mapillary images...
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:10<00:00,  2.10s/loc]
+🌋 Analysing 5 images with llava...
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:42<00:00,  8.56s/img]
+📝 Synthesizing summary with llama3.1...
+
+========================================
+       STREET VIBE SUMMARY
+========================================
+
+{
+  "mean_greenness_index": 6,
+  "consistency_note": "Segments 1 and 5 have high scores, while Segments 2 and 3 are lower. There is some consistency in Segment 4 being irrelevant due to a lack of greenery."
+}
+(base) ilya@192 streetvibes % streetvibes "bury place, london" --v-prompt "Assess visible street greenness only. Score 0–10 based on trees and vegetation visible from the street, 0=no vegetation, 10=very green. Ignore weather and season. Return JSON with (i) greenness_score (a single number between 0 and 10) and (ii) greenness_rationale (brief sentence, visible evidence only)" --t-prompt "Combine multiple greenness scores for one street. Compute the mean and round to nearest integer. Note agreement or disagreement briefly. Do not add new evidence. Return JSON: with (i) mean_greenness_index (a single integer between 0 and 10) and (ii) consistency_note" --json-keys "mean_greenness_index,consistency_note"
+🔎 Locating 'bury place, london'...
+📍 Found 'Bury Place' (OSM ID: 438304614).
+📏 Length of this + adjacent road segments: 118 meters.
+🎰 Sampling 5 points along the street...
+📸 Downloading Mapillary images...
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:16<00:00,  3.40s/loc]
+🌋 Analysing 5 images with llava...
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:41<00:00,  8.38s/img]
+📝 Synthesizing summary with llama3.1...
+
+========================================
+       STREET VIBE SUMMARY
+========================================
+
+{
+  "mean_greenness_index": 4,
+  "consistency_note": "Generally consistent with some variation"
+}
+(base) ilya@192 streetvibes % streetvibes "gilbert place, london" --v-prompt "Assess visible street greenness only. Score 0–10 based on trees and vegetation visible from the street, 0=no vegetation, 10=very green. Ignore weather and season. Return JSON with (i) greenness_score (a single number between 0 and 10) and (ii) greenness_rationale (brief sentence, visible evidence only)" --t-prompt "Combine multiple greenness scores for one street. Compute the mean and round to nearest integer. Note agreement or disagreement briefly. Do not add new evidence. Return JSON: with (i) mean_greenness_index (a single integer between 0 and 10) and (ii) consistency_note" --json-keys "mean_greenness_index,consistency_note"
+🔎 Locating 'gilbert place, london'...
+Error: Cannot linemerge LINESTRING (-0.1243933 51.5184879, -0.1244409 51.5184682, -0.1244608 51.5184601, -0.1257291 51.517942, -0.1257417 51.5179368, -0.1257703 51.5179251)
+(base) ilya@192 streetvibes % streetvibes "little russell street place, london" --v-prompt "Assess visible street greenness only. Score 0–10 based on trees and vegetation visible from the street, 0=no vegetation, 10=very green. Ignore weather and season. Return JSON with (i) greenness_score (a single number between 0 and 10) and (ii) greenness_rationale (brief sentence, visible evidence only)" --t-prompt "Combine multiple greenness scores for one street. Compute the mean and round to nearest integer. Note agreement or disagreement briefly. Do not add new evidence. Return JSON: with (i) mean_greenness_index (a single integer between 0 and 10) and (ii) consistency_note" --json-keys "mean_greenness_index,consistency_note"
+🔎 Locating 'little russell street place, london'...
+^C
+Aborted!
+(base) ilya@192 streetvibes % streetvibes "little russell street, london" --v-prompt "Assess visible street greenness only. Score 0–10 based on trees and vegetation visible from the street, 0=no vegetation, 10=very green. Ignore weather and season. Return JSON with (i) greenness_score (a single number between 0 and 10) and (ii) greenness_rationale (brief sentence, visible evidence only)" --t-prompt "Combine multiple greenness scores for one street. Compute the mean and round to nearest integer. Note agreement or disagreement briefly. Do not add new evidence. Return JSON: with (i) mean_greenness_index (a single integer between 0 and 10) and (ii) consistency_note" --json-keys "mean_greenness_index,consistency_note"
+🔎 Locating 'little russell street, london'...
+Error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=little+russell+street%2C+london&format=json&limit=1&polygon_geojson=1 (Caused by ReadTimeoutError("HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Read timed out. (read timeout=1)"))
+(base) ilya@192 streetvibes % streetvibes "little russell street, london" --v-prompt "Assess visible street greenness only. Score 0–10 based on trees and vegetation visible from the street, 0=no vegetation, 10=very green. Ignore weather and season. Return JSON with (i) greenness_score (a single number between 0 and 10) and (ii) greenness_rationale (brief sentence, visible evidence only)" --t-prompt "Combine multiple greenness scores for one street. Compute the mean and round to nearest integer. Note agreement or disagreement briefly. Do not add new evidence. Return JSON: with (i) mean_greenness_index (a single integer between 0 and 10) and (ii) consistency_note" --json-keys "mean_greenness_index,consistency_note"
+🔎 Locating 'little russell street, london'...
+📍 Found 'Little Russell Street' (OSM ID: 67551928).
+📏 Length of this + adjacent road segments: 168 meters.
+🎰 Sampling 5 points along the street...
+📸 Downloading Mapillary images...
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:12<00:00,  2.56s/loc]
+🌋 Analysing 3 images with llava...
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:27<00:00,  9.31s/img]
+📝 Synthesizing summary with llama3.1...
+
+========================================
+       STREET VIBE SUMMARY
+========================================
+
+{
+  "mean_greenness_index": 4,
+  "consistency_note": "Segments show varying levels of greenery; agreement on low level of greenery among some segments, disagreement on moderate level of greenery in one segment"
+}
+(base) ilya@192 streetvibes % streetvibes "museum street, london" --v-prompt "Assess visible street greenness only. Score 0–10 based on trees and vegetation visible from the street, 0=no vegetation, 10=very green. Ignore weather and season. Return JSON with (i) greenness_score (a single number between 0 and 10) and (ii) greenness_rationale (brief sentence, visible evidence only)" --t-prompt "Combine multiple greenness scores for one street. Compute the mean and round to nearest integer. Note agreement or disagreement briefly. Do not add new evidence. Return JSON: with (i) mean_greenness_index (a single integer between 0 and 10) and (ii) consistency_note" --json-keys "mean_greenness_index,consistency_note"
+🔎 Locating 'museum street, london'...
+📍 Found 'Museum Street' (OSM ID: 1447983649).
+📏 Length of this + adjacent road segments: 252 meters.
+🎰 Sampling 5 points along the street...
+📸 Downloading Mapillary images...
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:21<00:00,  4.33s/loc]
+🌋 Analysing 4 images with llava...
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:30<00:00,  7.63s/img]
+📝 Synthesizing summary with llama3.1...
+
+========================================
+       STREET VIBE SUMMARY
+========================================
+
+{
+  "mean_greenness_index": 3,
+  "consistency_note": "Some segments have inconsistent descriptions (e.g., Segment 2 has a high greenness score but mentions no vegetation on the pavement or lawns), while others are more descriptive (e.g., Segment 4 clearly states the street is almost devoid of vegetation)."
+}
+(base) ilya@192 streetvibes % streetvibes "coptic street, london" --v-prompt "Assess visible street greenness only. Score 0–10 based on trees and vegetation visible from the street, 0=no vegetation, 10=very green. Ignore weather and season. Return JSON with (i) greenness_score (a single number between 0 and 10) and (ii) greenness_rationale (brief sentence, visible evidence only)" --t-prompt "Combine multiple greenness scores for one street. Compute the mean and round to nearest integer. Note agreement or disagreement briefly. Do not add new evidence. Return JSON: with (i) mean_greenness_index (a single integer between 0 and 10) and (ii) consistency_note" --json-keys "mean_greenness_index,consistency_note"
+🔎 Locating 'coptic street, london'...
+Error: 504 Server Error: Gateway Timeout for url: https://overpass-api.de/api/interpreter
+(base) ilya@192 streetvibes % streetvibes "coptic street, london" --v-prompt "Assess visible street greenness only. Score 0–10 based on trees and vegetation visible from the street, 0=no vegetation, 10=very green. Ignore weather and season. Return JSON with (i) greenness_score (a single number between 0 and 10) and (ii) greenness_rationale (brief sentence, visible evidence only)" --t-prompt "Combine multiple greenness scores for one street. Compute the mean and round to nearest integer. Note agreement or disagreement briefly. Do not add new evidence. Return JSON: with (i) mean_greenness_index (a single integer between 0 and 10) and (ii) consistency_note" --json-keys "mean_greenness_index,consistency_note"
+🔎 Locating 'coptic street, london'...
+📍 Found 'Coptic Street' (OSM ID: 4615507).
+📏 Length of this + adjacent road segments: 57 meters.
+🎰 Sampling 5 points along the street...
+📸 Downloading Mapillary images...
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:10<00:00,  2.18s/loc]
+🌋 Analysing 3 images with llava...
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:22<00:00,  7.39s/img]
+📝 Synthesizing summary with llama3.1...
+
+========================================
+       STREET VIBE SUMMARY
+========================================
+
+{
+  "mean_greenness_index": 4,
+  "consistency_note": "Disagree: Segment 1 has significantly lower greenness score compared to Segments 2 and 3."
+}
+(base) ilya@192 streetvibes % streetvibes "streatham street, london" --v-prompt "Assess visible street greenness only. Score 0–10 based on trees and vegetation visible from the street, 0=no vegetation, 10=very green. Ignore weather and season. Return JSON with (i) greenness_score (a single number between 0 and 10) and (ii) greenness_rationale (brief sentence, visible evidence only)" --t-prompt "Combine multiple greenness scores for one street. Compute the mean and round to nearest integer. Note agreement or disagreement briefly. Do not add new evidence. Return JSON: with (i) mean_greenness_index (a single integer between 0 and 10) and (ii) consistency_note" --json-keys "mean_greenness_index,consistency_note"
+🔎 Locating 'streatham street, london'...
+📍 Found 'Streatham Street' (OSM ID: 67551930).
+📏 Length of this + adjacent road segments: 53 meters.
+🎰 Sampling 5 points along the street...
+📸 Downloading Mapillary images...
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:17<00:00,  3.57s/loc]
+🌋 Analysing 3 images with llava...
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:26<00:00,  8.85s/img]
+📝 Synthesizing summary with llama3.1...
+
+========================================
+       STREET VIBE SUMMARY
+========================================
+
+{
+  "mean_greenness_index": 4,
+  "consistency_note": "Scores vary significantly between segments. Segment 2 has a relatively high greenness score of 7 compared to Segment 1 and 3, which have scores of 2 and 3 respectively."
+}
+(base) ilya@192 streetvibes % streetvibes "willoughby street, london" --v-prompt "Assess visible street greenness only. Score 0–10 based on trees and vegetation visible from the street, 0=no vegetation, 10=very green. Ignore weather and season. Return JSON with (i) greenness_score (a single number between 0 and 10) and (ii) greenness_rationale (brief sentence, visible evidence only)" --t-prompt "Combine multiple greenness scores for one street. Compute the mean and round to nearest integer. Note agreement or disagreement briefly. Do not add new evidence. Return JSON: with (i) mean_greenness_index (a single integer between 0 and 10) and (ii) consistency_note" --json-keys "mean_greenness_index,consistency_note"
+🔎 Locating 'willoughby street, london'...
+Error: Cannot linemerge LINESTRING (-0.126793 51.5174708, -0.1268112 51.5174922, -0.1268189 51.5175013, -0.1268906 51.5175856, -0.1269677 51.5176854, -0.1270767 51.5178639, -0.1270882 51.5178827, -0.1271056 51.5179111)
+(base) ilya@192 streetvibes % streetvibes "bloomsbury street, london" --v-prompt "Assess visible street greenness only. Score 0–10 based on trees and vegetation visible from the street, 0=no vegetation, 10=very green. Ignore weather and season. Return JSON with (i) greenness_score (a single number between 0 and 10) and (ii) greenness_rationale (brief sentence, visible evidence only)" --t-prompt "Combine multiple greenness scores for one street. Compute the mean and round to nearest integer. Note agreement or disagreement briefly. Do not add new evidence. Return JSON: with (i) mean_greenness_index (a single integer between 0 and 10) and (ii) consistency_note" --json-keys "mean_greenness_index,consistency_note"
+🔎 Locating 'bloomsbury street, london'...
+📍 Found 'Bloomsbury Street' (OSM ID: 694567131).
+📏 Length of this + adjacent road segments: 124 meters.
+🎰 Sampling 5 points along the street...
+📸 Downloading Mapillary images...
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:16<00:00,  3.24s/loc]
+🌋 Analysing 5 images with llava...
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:33<00:00,  6.74s/img]
+📝 Synthesizing summary with llama3.1...
+
+========================================
+       STREET VIBE SUMMARY
+========================================
+
+{
+  "mean_greenness_index": 4,
+  "consistency_note": "Scores are generally consistent, but Segment 3 and Segment 5 have lower scores due to limited greenery"
+}
+(base) ilya@192 streetvibes % streetvibes "willoughby street, london" --v-prompt "Assess visible street greenness only. Score 0–10 based on trees and vegetation visible from the street, 0=no vegetation, 10=very green. Ignore weather and season. Return JSON with (i) greenness_score (a single number between 0 and 10) and (ii) greenness_rationale (brief sentence, visible evidence only)" --t-prompt "Combine multiple greenness scores for one street. Compute the mean and round to nearest integer. Note agreement or disagreement briefly. Do not add new evidence. Return JSON: with (i) mean_greenness_index (a single integer between 0 and 10) and (ii) consistency_note" --json-keys "mean_greenness_index,consistency_note"
+🔎 Locating 'willoughby street, london'...
+📍 Found 'Willoughby Street' (OSM ID: 4253554).
+📏 Length of this + adjacent road segments: 54 meters.
+🎰 Sampling 5 points along the street...
+📸 Downloading Mapillary images...
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:12<00:00,  2.42s/loc]
+🌋 Analysing 3 images with llava...
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 3/3 [00:20<00:00,  6.72s/img]
+📝 Synthesizing summary with llama3.1...
+
+========================================
+       STREET VIBE SUMMARY
+========================================
+
+{
+  "mean_greenness_index": 3,
+  "consistency_note": "Moderate agreement, scores are within one point of each other"
+}
+(base) ilya@192 streetvibes % streetvibes "gilbert place, london" --v-prompt "Assess visible street greenness only. Score 0–10 based on trees and vegetation visible from the street, 0=no vegetation, 10=very green. Ignore weather and season. Return JSON with (i) greenness_score (a single number between 0 and 10) and (ii) greenness_rationale (brief sentence, visible evidence only)" --t-prompt "Combine multiple greenness scores for one street. Compute the mean and round to nearest integer. Note agreement or disagreement briefly. Do not add new evidence. Return JSON: with (i) mean_greenness_index (a single integer between 0 and 10) and (ii) consistency_note" --json-keys "mean_greenness_index,consistency_note"
+🔎 Locating 'gilbert place, london'...
+📍 Found 'Gilbert Place' (OSM ID: 4253215).
+📏 Length of this + adjacent road segments: 114 meters.
+🎰 Sampling 5 points along the street...
+📸 Downloading Mapillary images...
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:14<00:00,  2.89s/loc]
+🌋 Analysing 4 images with llava...
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:28<00:00,  7.23s/img]
+📝 Synthesizing summary with llama3.1...
+
+========================================
+       STREET VIBE SUMMARY
+========================================
+
+{
+  "mean_greenness_index": 4,
+  "consistency_note": "The scores are somewhat inconsistent, with a range of 3-6. This may be due to subjective interpretation of what constitutes 'green' in different images."
+}
+(base) ilya@192 streetvibes % streetvibes "bloomsbury place, london" --v-prompt "Assess visible street greenness only. Score 0–10 based on trees and vegetation visible from the street, 0=no vegetation, 10=very green. Ignore weather and season. Return JSON with (i) greenness_score (a single number between 0 and 10) and (ii) greenness_rationale (brief sentence, visible evidence only)" --t-prompt "Combine multiple greenness scores for one street. Compute the mean and round to nearest integer. Note agreement or disagreement briefly. Do not add new evidence. Return JSON: with (i) mean_greenness_index (a single integer between 0 and 10) and (ii) consistency_note" --json-keys "mean_greenness_index,consistency_note" 
+🔎 Locating 'bloomsbury place, london'...
+📍 Found 'Bloomsbury Place' (OSM ID: 3088166).
+📏 Length of this + adjacent road segments: 61 meters.
+🎰 Sampling 5 points along the street...
+📸 Downloading Mapillary images...
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:12<00:00,  2.54s/loc]
+🌋 Analysing 4 images with llava...
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:30<00:00,  7.52s/img]
+📝 Synthesizing summary with llama3.1...
+
+========================================
+       STREET VIBE SUMMARY
+========================================
+
+{
+  "mean_greenness_index": 2,
+  "consistency_note": "Disagreement between segment greenness scores"
+}
+(base) ilya@192 streetvibes % streetvibes "bloomsbury place, london" --v-prompt "Assess visible street greenness only. Score 0–10 based on trees and vegetation visible from the street, 0=no vegetation, 10=very green. Ignore weather and season. Return JSON with (i) greenness_score (a single number between 0 and 10) and (ii) greenness_rationale (brief sentence, visible evidence only)" --t-prompt "Combine multiple greenness scores for one street. Compute the mean and round to nearest integer. Note agreement or disagreement briefly. Do not add new evidence. Return JSON: with (i) mean_greenness_index (a single integer between 0 and 10) and (ii) consistency_note" --json-keys "mean_greenness_index,consistency_note"
+🔎 Locating 'bloomsbury place, london'...
+Error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=bloomsbury+place%2C+london&format=json&limit=1&polygon_geojson=1 (Caused by ReadTimeoutError("HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Read timed out. (read timeout=1)"))
+(base) ilya@192 streetvibes % streetvibes "bloomsbury place, london" --v-prompt "Assess visible street greenness only. Score 0–10 based on trees and vegetation visible from the street, 0=no vegetation, 10=very green. Ignore weather and season. Return JSON with (i) greenness_score (a single number between 0 and 10) and (ii) greenness_rationale (brief sentence, visible evidence only)" --t-prompt "Combine multiple greenness scores for one street. Compute the mean and round to nearest integer. Note agreement or disagreement briefly. Do not add new evidence. Return JSON: with (i) mean_greenness_index (a single integer between 0 and 10) and (ii) consistency_note" --json-keys "mean_greenness_index,consistency_note"
+🔎 Locating 'bloomsbury place, london'...
+Error: HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Max retries exceeded with url: /search?q=bloomsbury+place%2C+london&format=json&limit=1&polygon_geojson=1 (Caused by ReadTimeoutError("HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Read timed out. (read timeout=1)"))
+(base) ilya@192 streetvibes % streetvibes "bloomsbury place, london" --v-prompt "Assess visible street greenness only. Score 0–10 based on trees and vegetation visible from the street, 0=no vegetation, 10=very green. Ignore weather and season. Return JSON with (i) greenness_score (a single number between 0 and 10) and (ii) greenness_rationale (brief sentence, visible evidence only)" --t-prompt "Combine multiple greenness scores for one street. Compute the mean and round to nearest integer. Note agreement or disagreement briefly. Do not add new evidence. Return JSON: with (i) mean_greenness_index (a single integer between 0 and 10) and (ii) consistency_note" --json-keys "mean_greenness_index,consistency_note"
+🔎 Locating 'bloomsbury place, london'...
+📍 Found 'Bloomsbury Place' (OSM ID: 3088166).
+📏 Length of this + adjacent road segments: 61 meters.
+🎰 Sampling 5 points along the street...
+📸 Downloading Mapillary images...
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:09<00:00,  1.93s/loc]
+🌋 Analysing 4 images with llava...
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:30<00:00,  7.71s/img]
+📝 Synthesizing summary with llama3.1...
+
+========================================
+       STREET VIBE SUMMARY
+========================================
+
+{
+  "mean_greenness_index": 4,
+  "consistency_note": "Segments 2-4 have low scores indicating disagreement, while Segment 1 has a high score indicating deviation from the mean"
+}
+(base) ilya@192 streetvibes % 
