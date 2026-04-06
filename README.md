@@ -1,12 +1,12 @@
 # StreetVibes 🏙️
 
-**\[Accepted to GISRUK 2026\]**
+[![DOI](https://zenodo.org/badge/802180311.svg)](https://zenodo.org/records/19430425)
 
 StreetVibes is a CLI tool that automatically analyses the 'vibe' of any street using AI. It combines OpenStreetMap data, Mapillary imagery, and local Large Language Models (LLMs) to generate urban planning summaries.
 
 Just type the street name + city, and (if there are Mapillary images), get the summary!
 
-<img src="streetvibes.svg" style="width:100%; magin-top:20px;">
+<img src="streetvibes.pdf" style="width:100%; magin-top:20px;">
 
 ## 🛠️ Prerequisites
 
